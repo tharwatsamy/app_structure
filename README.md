@@ -1,16 +1,30 @@
-# app_structure
 
-A new Flutter project.
 
-## Getting Started
+This App Follows the BLOC + Repository Pattern Archtecture. 
 
-This project is a starting point for a Flutter application.
+**BlOC** (Busines Logic Component) is an Architectrual design pattern recommended by google engineers for enterprise apps, Similar to redux.
 
-A few resources to get you started if this is your first Flutter project:
+For dependecy injection, **GetIt** is used, it is a dependency injection framwork based on the sevice locator pattern.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+For Api request we are using dio 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+for navigation we are using GetRoute
+
+for functional programming we are using dartz
+
+The project folders are organised feature-based, first level dirs contains :
+
+-Features 
+-Core
+
+Second level dirs:
+
+*Feature 
+  -Presentation
+    -views  => contains all the ui related data
+    -manger => holds the cubits that mange that states of our app
+  -data 
+    -models => contains all the model related to the feature
+    -repositries =? contains the abstract repo and it's implementation
+*Core     
+  -The Core folder contains app general atrtributes common among all features  like Errors , Utils , Mixins , Api wrapper 
