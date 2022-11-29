@@ -14,17 +14,17 @@ for functional programming we are using dartz
 
 The project folders are organised feature-based, first level dirs contains :
 
--Features 
--Core
+- Features 
+- Core
 
 Second level dirs:
 
-*Feature 
-  -Presentation
-    -views  => contains all the ui related data
-    -manger => holds the cubits that mange that states of our app
-  -data 
-    -models => contains all the model related to the feature
-    -repositries =? contains the abstract repo and it's implementation
-*Core     
-  -The Core folder contains app general atrtributes common among all features  like Errors , Utils , Mixins , Api wrapper 
+* Feature 
+  - Presentation
+    - views  => contains all the ui related data
+    - manger => holds the cubits that mange that states of our app
+  - data 
+    - models => contains all the model related to the feature
+    - repositries =? contains the abstract repo and it's implementation
+* Core     
+  - The Core folder contains app general atrtributes common among all features  like Errors , Utils , Mixins , Api wrapper 
