@@ -8,4 +8,16 @@ class HomeDetailsCubit extends Cubit<HomeDetailsState> {
   HomeDetailsCubit(this.repoName) : super(HomeDetailsInitial());
 
   final RepoName repoName;
+
+  void methoNamde() async {
+    emit(HomeDetailsLoading());
+
+    var result = await repoName.methodNanme();
+
+    result.fold((failure) {
+      emit(HomeDetailsFailure());
+    }, (result) {
+      emit(HomeDetailsSuccess());
+    });
+  }
 }
